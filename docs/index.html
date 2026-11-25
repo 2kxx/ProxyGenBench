@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="ProxyGenBench: 312 evaluation cases for proxy-guided video generation. Preserve structure, complete the scene, and bind multimodal conditions.">
+  <meta property="og:title" content="ProxyGenBench">
+  <meta property="og:description" content="Benchmarking Proxy-Guided Video Generation">
+  <meta property="og:image" content="https://2kxx.github.io/ProxyGenBench/assets/overview.webp">
+  <title>ProxyGenBench | Proxy-Guided Video Generation</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style-v4.css?v=5">
+  <script src="icons.js" defer></script>
+  <script src="case-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top"><span class="brand-symbol" aria-hidden="true">P<span>G</span></span>ProxyGenBench</a>
+    <nav aria-label="Main navigation">
+      <a href="#showcase">Examples</a><a href="#benchmark">Benchmark</a><a href="#checklist">Evaluation</a><a href="#results">Leaderboard</a>
+      <a class="nav-github" href="https://github.com/2kxx/ProxyGenBench" aria-label="GitHub repository"><i data-lucide="github"></i></a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="intro wrap">
+      <h1>ProxyGenBench</h1>
+      <p class="paper-title">Benchmarking Proxy-Guided Video Generation</p>
+      <div class="authors">
+        <span>Zhenchen Tang<sup>1,4,5,*</sup></span><span>Haolin Lu<sup>2,4,*</sup></span><span>Songlin Yang<sup>3,4</sup></span>
+        <span>Xiaotong Zhao<sup>4</sup></span><span>Ran Zhang<sup>4</sup></span><span>Bo Peng<sup>1,5</sup></span>
+        <span>Shuai Li<sup>4</sup></span><span>Haotian Fan<sup>4</sup></span><span>Haobin Zhong<sup>4</sup></span>
+        <span>Yanni Zhang<sup>4</sup></span><span>Songlian Li<sup>4</sup></span><span>Ning Zhang<sup>4</sup></span>
+        <span>Xun Gao<sup>4</sup></span><span>Alan Zhao<sup>4</sup></span><span>Jing Dong<sup>1,5,†</sup></span>
+      </div>
+      <div class="affiliations">
+        <span><sup>1</sup> New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences</span>
+        <span><sup>2</sup> UC San Diego</span><span><sup>3</sup> HKUST</span><span><sup>4</sup> Tencent</span>
+        <span><sup>5</sup> School of Artificial Intelligence, University of Chinese Academy of Sciences</span>
+      </div>
+      <p class="author-note">* Equal contribution &nbsp; † Corresponding author</p>
+      <div class="resource-links">
+        <a class="button primary" href="assets/ProxyGenBench.pdf"><i data-lucide="file-text"></i>Paper</a>
+        <a class="button" href="https://github.com/2kxx/ProxyGenBench"><i data-lucide="github"></i>GitHub</a>
+        <a class="button" href="#results"><i data-lucide="trophy"></i>Leaderboard</a>
+      </div>
+    </section>
+
+    <section id="showcase" class="showcase wrap">
+      <div class="section-heading showcase-heading">
+        <div><span class="eyebrow">SELECTED EXAMPLES</span><h2>A rough proxy. A richer world.</h2><p class="section-deck">Matched generations, with and without structural guidance.</p></div>
+      </div>
+      <div class="case-tabs" role="tablist" aria-label="Video examples">
+        <button role="tab" aria-selected="true" aria-controls="comparison-panel" id="tab-bakery" data-case="bakery"><span class="case-tab-index">01</span><span><strong>Bakery</strong><small>Multi-shot storytelling</small></span><i data-lucide="clapperboard"></i></button>
+        <button role="tab" aria-selected="false" aria-controls="comparison-panel" id="tab-gate" data-case="gate" tabindex="-1"><span class="case-tab-index">02</span><span><strong>Closing gate</strong><small>Dynamic action</small></span><i data-lucide="door-open"></i></button>
+        <button role="tab" aria-selected="false" aria-controls="comparison-panel" id="tab-key" data-case="key" tabindex="-1"><span class="case-tab-index">03</span><span><strong>Hidden key</strong><small>Object interaction</small></span><i data-lucide="key-round"></i></button>
+      </div>
+      <div id="comparison-panel" role="tabpanel" aria-labelledby="tab-bakery">
+        <div class="comparison-stage">
+          <div class="video-grid">
+            <figure class="video-figure proxy">
+              <figcaption><span class="column-index">01</span>Structural proxy <span class="column-note">INPUT</span></figcaption>
+              <video id="video-proxy" muted playsinline preload="metadata" poster="assets/bakery-proxy.webp" src="assets/bakery-proxy.mp4" aria-label="Structural proxy video"></video>
+              <p>Coarse geometry. Intentional structure.</p>
+            </figure>
+            <figure class="video-figure without">
+              <figcaption><span class="column-index">02</span>Without proxy <span class="column-note">OUTPUT</span></figcaption>
+              <video id="video-without" muted playsinline preload="metadata" poster="assets/bakery-without.webp" src="assets/bakery-without.mp4" aria-label="Video generated without proxy guidance"></video>
+              <p id="without-caption">The room and object details drift across cuts.</p>
+            </figure>
+            <figure class="video-figure with">
+              <figcaption><span class="column-index">03</span>With proxy <span class="column-note">OUTPUT</span></figcaption>
+              <video id="video-with" muted playsinline preload="metadata" poster="assets/bakery-with.webp" src="assets/bakery-with.mp4" aria-label="Video generated with proxy guidance"></video>
+              <p id="with-caption">More stable seating, eyelines, and parcel placement.</p>
+            </figure>
+          </div>
+          <div class="transport">
+            <button id="play-comparison" class="icon-button" title="Play comparison" aria-label="Play comparison"><i data-lucide="play"></i></button>
+            <button id="restart-comparison" class="icon-button" title="Restart comparison" aria-label="Restart comparison"><i data-lucide="rotate-ccw"></i></button>
+            <span id="comparison-time" class="time">00:00 / 00:15</span>
+            <input id="comparison-seek" type="range" min="0" max="15" step="0.01" value="0" aria-label="Comparison video position">
+            <button id="comparison-sound" class="icon-button" title="Unmute proxy-guided output" aria-label="Unmute proxy-guided output" aria-pressed="false"><i data-lucide="volume-x"></i></button>
+            <span id="case-model" class="model-label">MiniMax-H3</span>
+          </div>
+        </div>
+        <div class="case-detail"><p id="case-description">Two people, one parcel, three shots. Proxy guidance anchors the same conversation in the same space.</p><span id="case-category">NATIVE PROXY · MULTI-SHOT</span></div>
+        <details class="showcase-prompts">
+          <summary><i data-lucide="text"></i>Generation text <span>Pr0 · T2</span></summary>
+          <div class="prompt-columns">
+            <article><h3>Without proxy</h3><p id="prompt-without"></p></article>
+            <article><h3>With proxy</h3><p id="prompt-with"></p></article>
+          </div>
+        </details>
+      </div>
+      <figure class="paper-figure teaser-figure"><img src="assets/overview.webp" alt="ProxyGenBench paper teaser: proxy-guided video generation, evaluation dimensions, and representative results" loading="lazy"></figure>
+    </section>
+
+    <section class="stats-band">
+      <div class="wrap stats"><div><strong>60</strong><span>Scenes</span></div><div><strong>312</strong><span>Evaluation cases</span></div><div><strong>5</strong><span>Video generators</span></div><div><strong>32</strong><span>Fine-grained criteria</span></div></div>
+    </section>
+
+    <section id="benchmark" class="wrap section">
+      <div class="section-heading"><div><span class="eyebrow">THE BENCHMARK</span><h2>Preserve. Complete. Bind.</h2></div><span class="section-number">01 / 04</span></div>
+      <div class="abstract-layout">
+        <h3>A proxy is a plan.<br>Not the final video.</h3>
+        <div class="prose"><p>Recent video generators produce realistic videos, yet controlling how scenes unfold remains challenging. Structural proxies, such as animated 3D blockouts, specify scene layout, motion, camera behavior, and event order. But coarse inputs leave details unspecified and may contain artifacts that should not be reproduced.</p><p>ProxyGenBench studies three interacting requirements: preserve the intended structure, complete missing content and correct proxy artifacts, and bind additional text, image, and audio conditions to the right entities and events.</p></div>
+      </div>
+      <div class="dimension-grid">
+        <article class="dimension preserve"><i data-lucide="scan"></i><span class="dimension-letter">P</span><h3>Preserve</h3><p>Keep the plan.</p><ul><li>Spatial structure</li><li>Motion &amp; camera control</li><li>Temporal &amp; shot continuity</li></ul></article>
+        <article class="dimension complete"><i data-lucide="sparkles"></i><span class="dimension-letter">C</span><h3>Complete</h3><p>Realize the scene.</p><ul><li>Visual realization quality</li><li>Motion &amp; physical plausibility</li><li>Proxy abstraction handling</li></ul></article>
+        <article class="dimension bind"><i data-lucide="link"></i><span class="dimension-letter">B</span><h3>Bind</h3><p>Connect the conditions.</p><ul><li>Entity &amp; appearance grounding</li><li>Action &amp; audio-event grounding</li></ul></article>
+      </div>
+      <figure class="paper-figure"><img src="assets/coverage.webp" alt="Four proxy source groups and benchmark coverage across 60 scenes and 312 evaluation cases" loading="lazy"><figcaption>Four source groups, three scene tasks, and controlled variations in proxy fidelity, text detail, and multimodal inputs.</figcaption></figure>
+      <div class="construction-row"><div><span class="eyebrow">SCENE TASKS</span><p>Dynamic action<br>Multi-shot storytelling<br>Multi-view consistency</p></div><div><span class="eyebrow">PROXY FIDELITY</span><p>Pr0 · Blockout<br>Pr1 · Figure<br>Pr2 · Detail</p></div><div><span class="eyebrow">INPUT VARIATIONS</span><p>Text detail · T0 / T1 / T2<br>Image &amp; audio references<br>Matched reference ablations</p></div></div>
+    </section>
+
+    <section id="checklist" class="evaluation-band">
+      <div class="wrap section">
+        <div class="section-heading"><div><span class="eyebrow">CHECKLIST-GUIDED EVALUATION</span><h2>Ground every score in evidence.</h2></div><span class="section-number">02 / 04</span></div>
+        <p class="section-intro">Case-specific checklists are generated from the available inputs, verified, and fixed before scoring. All models on the same case share the same checklist.</p>
+        <div class="pipeline"><div><span>01</span><strong>Available inputs</strong><small>Proxy + text + references</small></div><i data-lucide="arrow-right"></i><div><span>02</span><strong>Generate &amp; verify</strong><small>Input-grounded checklist</small></div><i data-lucide="arrow-right"></i><div><span>03</span><strong>Score evidence</strong><small>Visual and audio judgments</small></div><i data-lucide="arrow-right"></i><div><span>04</span><strong>Aggregate</strong><small>P / C / B + Strict</small></div></div>
+        <div class="checklist-heading"><div><h3>Two paths. One pillar. The same identities.</h3><p>Pillar crossing · Native Proxy · Pr0 + T2 · Seedance-2.5</p></div></div>
+        <div class="checklist-layout">
+          <div class="checklist-media">
+            <div class="checklist-video-grid"><figure><figcaption>Structural proxy</figcaption><video controls muted playsinline preload="metadata" src="assets/checklist-proxy.mp4" poster="assets/checklist-proxy.webp"></video></figure><figure><figcaption>Generated output</figcaption><video id="checklist-video" controls playsinline preload="metadata" src="assets/checklist-output.mp4" poster="assets/checklist-output.webp"></video></figure></div>
+            <div class="evidence-timeline" aria-label="Prompt-defined event times">
+              <button data-time="4" title="Seek to the requested occlusion phase"><i data-lucide="eye-off"></i><strong>04.00 s</strong><span>A behind pillar</span></button>
+              <button data-time="8" title="Seek to the requested reappearance phase"><i data-lucide="eye"></i><strong>08.00 s</strong><span>A reappears</span></button>
+              <button data-time="11" title="Seek to the requested final hold"><i data-lucide="pause"></i><strong>11.00 s</strong><span>Final positions</span></button>
+            </div>
+            <p class="timeline-note">Requested times from the generation text, not claims that the output meets them.</p>
+            <details class="prompt"><summary>Character references</summary><div class="checklist-references"><figure><img src="assets/checklist-ref-1.png" alt="Reference image 1, identity assigned to commuter A" loading="lazy"><figcaption>A · Red raincoat + newspaper</figcaption></figure><figure><img src="assets/checklist-ref-2.png" alt="Reference image 2, identity assigned to commuter B" loading="lazy"><figcaption>B · Blue jacket + bag</figcaption></figure></div></details>
+            <details class="prompt"><summary>Generation prompt</summary><p id="checklist-prompt"></p></details>
+          </div>
+          <div class="checklist-tool">
+            <div class="checklist-tool-heading"><span>FULL CHECKLIST · 29 CRITERIA</span><span>Normalized score · 0–1</span></div>
+            <div class="checklist-filters" role="group" aria-label="Checklist dimension">
+              <button class="active" data-dimension="Preserve" aria-pressed="true">Preserve</button><button data-dimension="Complete" aria-pressed="false">Complete</button><button data-dimension="Bind" aria-pressed="false">Bind</button>
+            </div>
+            <div id="checklist-items" class="checklist-items" aria-live="polite"><p>Loading case checklist...</p></div>
+            <div id="checklist-score" class="case-scores"></div>
+            <p class="score-note">Three audio-reference checks do not apply because no reference audio was supplied.</p>
+          </div>
+        </div>
+        <div class="strict-equation"><div><span class="eyebrow">STRUCTURE-AWARE AGGREGATION</span><h3>Good-looking is not enough.</h3><p>Critical structural failures reduce the overall score, even when appearance or binding is strong.</p></div><div class="formula"><span>S = Q × ρ<sup>2</sup></span><small>Q: mean of applicable dimensions<br>ρ: fraction of critical Preserve checks that pass</small></div></div>
+      </div>
+    </section>
+
+    <section id="results" class="wrap section">
+      <div class="section-heading"><div><span class="eyebrow">BENCHMARK RESULTS</span><h2>Leaderboard</h2><p class="section-deck">Structure-aware evaluation across five video generators.</p></div><span class="section-number">03 / 04</span></div>
+      <div class="results-heading"><h3>Ranked by Strict score</h3><div class="result-tabs" role="group" aria-label="Audio reference group"><button class="active" data-group="no_audio" aria-pressed="true">Without audio references</button><button data-group="audio" aria-pressed="false">With audio references</button></div></div>
+      <div id="leaderboard-highlights" class="leaderboard-highlights" aria-live="polite"></div>
+      <div class="table-scroll"><table id="results-table"><thead><tr><th scope="col">Rank</th><th scope="col">Model</th><th scope="col">Preserve</th><th scope="col">Complete</th><th scope="col">Bind</th><th scope="col">Average</th><th scope="col" class="strict-col">Strict</th><th scope="col">Joint</th></tr></thead><tbody></tbody></table></div>
+      <p class="table-note">Paper-reported results, ranked by Strict within each input-reference group. Scores are on a 0–100 scale; higher is better. Joint is the percentage passing all critical Preserve checks. Missing outputs receive zero. Audio means independent input audio references, not generated audio.</p>
+      <h3 class="findings-title">What the benchmark reveals</h3>
+      <div class="findings">
+        <article><span class="finding-number">01</span><h3>Proxies improve spatiotemporal control.</h3><p>Proxy-guided outputs are preferred in 35 of 50 matched pairs under the two-order VLM protocol. The other outcomes are ties or order-dependent.</p><div class="preference-bar" aria-label="70 percent proxy wins, 30 percent other outcomes"><span></span></div><div class="bar-caption"><strong>70% proxy wins</strong><span>30% other</span></div></article>
+        <article><span class="finding-number">02</span><h3>More detail does not mean better completion.</h3><p>Across all five models on shared T2 scenes, Pr0 → Pr2 improves Preserve by 1.1–6.7 percentage points, while Complete decreases by 4.8–7.9 points.</p><div class="delta-pair"><span><i data-lucide="arrow-up-right"></i>Preserve</span><span><i data-lucide="arrow-down-right"></i>Complete</span></div></article>
+        <article><span class="finding-number">03</span><h3>Following the structure is not condition binding.</h3><p>Voice/source matching averages 0.768, but audiovisual timing alignment reaches only 0.513. The right voice can still arrive at the wrong moment.</p><div class="binding-bars"><div><span>Voice / source</span><b style="--value:76.8%"></b><strong>76.8</strong></div><div><span>A/V timing</span><b style="--value:51.3%"></b><strong>51.3</strong></div></div></article>
+      </div>
+    </section>
+
+    <section id="citation" class="citation-band">
+      <div class="wrap section">
+        <div class="section-heading"><div><span class="eyebrow">BUILDING ON THIS WORK</span><h2>Citation &amp; resources</h2></div><span class="section-number">04 / 04</span></div>
+        <div class="release-status"><i data-lucide="clock-3"></i><div><strong>Evaluation code and dataset are under review.</strong><p>Public release will follow completion of the review.</p></div></div>
+        <div class="citation-header"><span>BIBTEX</span><button id="copy-citation" class="icon-button" title="Copy citation" aria-label="Copy citation"><i data-lucide="copy"></i></button><span id="copy-status" role="status"></span></div>
+        <pre><code id="bibtex">@misc{tang2026proxygenbench,
+  title={ProxyGenBench: Benchmarking Proxy-Guided Video Generation},
+  author={Tang, Zhenchen and Lu, Haolin and Yang, Songlin and
+          Zhao, Xiaotong and Zhang, Ran and Peng, Bo and Li, Shuai and
+          Fan, Haotian and Zhong, Haobin and Zhang, Yanni and
+          Li, Songlian and Zhang, Ning and Gao, Xun and Zhao, Alan and
+          Dong, Jing},
+  year={2026},
+  note={Preprint},
+  url={https://2kxx.github.io/ProxyGenBench/}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><a class="wordmark" href="#top">ProxyGenBench</a><a href="https://github.com/2kxx/ProxyGenBench">GitHub <i data-lucide="arrow-up-right"></i></a></footer>
+</body>
+</html>

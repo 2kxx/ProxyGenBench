@@ -1,0 +1,67 @@
+[
+  {
+    "asset": "assets/bakery-proxy.mp4",
+    "source": "consistency/extracted/s04_across_the_table/assets/P0_T2/proxy.mp4",
+    "sha256": "2fdf9e4724b42ffa810fc81ab5a1aadaab62bbad64829b4b16531cb162c1a67d"
+  },
+  {
+    "asset": "assets/bakery-without.mp4",
+    "source": "consistency/extracted/s04_across_the_table/outputs/P0_T2_no_proxy/minimax.mp4",
+    "sha256": "89c335ce267d643f7f9a0c0a8cc7a8ddff41e5615f39866169152211eb031328"
+  },
+  {
+    "asset": "assets/bakery-with.mp4",
+    "source": "consistency/extracted/s04_across_the_table/outputs/P0_T2/minimax.mp4",
+    "sha256": "5b6f89697915648716723c23f7b54454534e2553ad51a45fc21d6af62d900399"
+  },
+  {
+    "asset": "assets/gate-proxy.mp4",
+    "source": "consistency/extracted/s05_closing_gate/assets/P0_T2/proxy.mp4",
+    "sha256": "b5b7c46f7087947f8fee43d31a4356814af4973ae7f490f619a15d6444b5e8d2"
+  },
+  {
+    "asset": "assets/gate-without.mp4",
+    "source": "consistency/extracted/s05_closing_gate/outputs/P0_T2_no_proxy/sd25.mp4",
+    "sha256": "eb3c3e0445a4cfbd964715a5f214f39033c324f161118a7cadae8df1b270a82c"
+  },
+  {
+    "asset": "assets/gate-with.mp4",
+    "source": "consistency/extracted/s05_closing_gate/outputs/P0_T2/sd25.mp4",
+    "sha256": "42804be9c2fe78a78c90cbd06b88606b0c2309d11bdff2c18e32f66a81603a8e"
+  },
+  {
+    "asset": "assets/key-proxy.mp4",
+    "source": "consistency/extracted/s02_key_under_cup/assets/P0_T2/proxy.mp4",
+    "sha256": "7d2b01d28130949619b719f8534d47102c1445038c80f116a3ec1d4704eb2c57"
+  },
+  {
+    "asset": "assets/key-without.mp4",
+    "source": "consistency/extracted/s02_key_under_cup/outputs/P0_T2_no_proxy/minimax.mp4",
+    "sha256": "94d9c95df20eb27709d73dcd35ea7280dd920b158fac03fb55ab8f82082af175"
+  },
+  {
+    "asset": "assets/key-with.mp4",
+    "source": "consistency/extracted/s02_key_under_cup/outputs/P0_T2/minimax.mp4",
+    "sha256": "71ae0c47498b583281d473ac6958ddbbb24f86d088955f03d06fc416b9c0d013"
+  },
+  {
+    "asset": "assets/checklist-proxy.mp4",
+    "source": "media/p2vbench-5scenes-4models_20261023/formal_bundle/s01_pillar_crossing/assets/P0_T2/proxy.mp4",
+    "sha256": "c8784bbb9352ec5ced6f05f66c438cbeaacbc058a5a63b3cd3aacadf98f7cdd6"
+  },
+  {
+    "asset": "assets/checklist-output.mp4",
+    "source": "media/p2vbench-5scenes-4models_20261023/videos/s01_pillar_crossing__P0_T2__sd25.mp4",
+    "sha256": "8e445f6fb5e23613f8d6fd79375137ba602abeb797852930aa6f223456ae27a0"
+  },
+  {
+    "asset": "assets/checklist-ref-1.png",
+    "source": "media/p2vbench-5scenes-4models_20261023/formal_bundle/s01_pillar_crossing/assets/P0_T2/ref_0.png",
+    "sha256": "fab6b88e0d97b8a3e81625e12e9194f2d05e430aa48d8377a753c176961b47cc"
+  },
+  {
+    "asset": "assets/checklist-ref-2.png",
+    "source": "media/p2vbench-5scenes-4models_20261023/formal_bundle/s01_pillar_crossing/assets/P0_T2/ref_1.png",
+    "sha256": "aa9d8aeee75824e66e9c5a3605944f96288e7e9f8e07ae419b9fb6eb4d159200"
+  }
+]

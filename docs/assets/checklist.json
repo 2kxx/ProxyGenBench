@@ -1,0 +1,883 @@
+{
+  "case_id": "s01_pillar_crossing__P0_T2",
+  "generation_id": "s01_pillar_crossing__P0_T2__sd25",
+  "model": "Seedance-2.5",
+  "source": "Native Proxy",
+  "prompt": "Use the attached silent proxy reference video for the camera, screen layout, timing, paths and depth order; its geometry and materials are placeholders; render the final appearance below. The figures are rigid stand-ins; use written gait and prop handling. Use the still images for character identity, with roles assigned in the description.\n\nCreate one uninterrupted, exactly 12.0-second locked wide shot of two commuters crossing an empty station hall after the last train. The camera is static at eye level, facing across the hall with a level horizon. There are no cuts, transitions, pans, tilts, zooms, dollies, reframing, or camera shake. Keep the left exit and right exit within the unchanged composition and leave enough room to show each commuter head to toe whenever not concealed by the pillar.\n\nThere are exactly two people, designated A and B. Reference image 1 supplies A's face and body identity; reference image 2 supplies B's face and body identity. Preserve each assigned identity consistently across the entire shot, including A's return after occlusion. A wears a red raincoat and holds a folded newspaper in one hand. B wears a blue jacket and carries a small bag. Clothing and props follow these fixed roles even if the reference images show different clothing.\n\nThe station is quiet and empty except for A and B, with soft overhead lighting, pale floor tiles, stone walls, closed ticket shutters, and subdued exit signs. A broad rectangular stone pillar occupies the center of the frame, its top extending beyond the upper border. Its solid width must hide A completely for the specified interval. Clearly preserve two distinct walking lanes: a farther lane behind the pillar for A and a nearer, camera-facing lane for B. The floor remains visible around the pillar so the spatial separation of these routes is easy to read.\n\n0.0-4.0 s: A enters from screen left and walks steadily toward screen right on the farther path behind the pillar. B enters from screen right and walks steadily toward screen left on the nearer path in front of it. Their full bodies are framed during the approaches. Use unhurried, natural steps, slight movement of A's raincoat, and a gentle swing of B's bag. Keep the newspaper folded and held, and keep the bag with B. Coordinate their starting positions and pace so A reaches and passes into the pillar's left silhouette by exactly 4.0 s, while B reaches the pillar's right side at that same time.\n\n4.0-8.0 s: A is fully occluded from 4.0 s until emergence begins shortly after 8.0 s. Throughout this interval, the pillar conceals all of A: no face, limbs, red fabric, or newspaper may protrude from either edge or appear through the stone. A continues moving rightward behind it without reversing or switching paths; this hidden movement is established by the approach and subsequent reappearance, not by showing A through the obstruction. Set the pillar width, route depth, and steady walking pace to make this four-second concealment physically coherent. Do not demand or simulate visibility of A while A is fully hidden.\n\nDuring those same 4.0-8.0 seconds, B moves right to left directly in front of the pillar's camera-facing stone surface. B's entire figure, blue jacket, and small bag remain clearly visible, uninterrupted by the pillar. B passes across the foreground of the occluded route, not behind the column. The two trajectories cross only in the image projection: B is nearer the camera, A is farther away, and the solid pillar remains between the camera and A. Their depth separation prevents any contact.\n\nShortly after 8.0 s, A begins reappearing from the pillar's screen-right edge, still traveling rightward. Reveal the same reference-assigned face and body, the same red raincoat, and the same folded newspaper as A clears the edge. At this time B clears the pillar's screen-left edge and continues leftward, maintaining the blue jacket and small bag. Allow the natural progression from A's first visible portion to A's fully unobstructed figure; keep the camera fixed rather than following the reappearance.\n\n8.0-11.0 s: Both continue toward the opposite exits and slow naturally into a stop by 11.0 s. A finishes near the right exit; B finishes near the left exit. Keep both fully inside the wide frame, clearly separated on opposite sides of the central pillar, with their clothing and props unchanged. From 11.0 through 12.0 s, hold these stopped final positions in the same composition. Neither person leaves the frame. Include no spoken dialogue, additional people, extra actions, or transitions. End at exactly 12.0 s on this unchanged wide view.\n",
+  "scores": {
+    "P": 1,
+    "C": 0.8958333333333334,
+    "B": 0.875
+  },
+  "historical_scores": {
+    "Preserve": 1,
+    "Complete": 0.8958333333333334,
+    "Bind": 0.875
+  },
+  "criteria": [
+    {
+      "id": "B1.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_025",
+      "dimension": "Bind",
+      "focus": "B1",
+      "question": "Does commuter A wear a red raincoat and hold a newspaper, while commuter B wears a blue jacket and carries a bag?",
+      "original_display_question": "Does commuter A wear a red raincoat and hold a newspaper, while commuter B wears a blue jacket and carries a bag?",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Does commuter A wear a red raincoat and hold a newspaper, while commuter B wears a blue jacket and carries a bag?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_025",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "B1.2",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_026",
+      "dimension": "Bind",
+      "focus": "B1",
+      "question": "Does commuter A match the facial and body identity of the woman in reference image 1, and does commuter B match the man in reference image 2?",
+      "original_display_question": "Does commuter A match the facial and body identity of the woman in reference image 1, and does commuter B match the man in reference image 2?",
+      "score": 0,
+      "passed": false,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 0,
+        "passed": false,
+        "answer": "no",
+        "question": "Does commuter A match the facial and body identity of the woman in reference image 1, and does commuter B match the man in reference image 2?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_026",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "B1.3",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_027",
+      "dimension": "Bind",
+      "focus": "B1",
+      "question": "Across shots and viewpoints with comparable visibility, does Commuter A and Commuter B keep the same text/reference-bound identity and appearance without unexplained changes?",
+      "original_display_question": "Across shots and viewpoints with comparable visibility, does Commuter A and Commuter B keep the same text/reference-bound identity and appearance without unexplained changes?",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "temporal_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Across shots and viewpoints with comparable visibility, does Commuter A and Commuter B keep the same text/reference-bound identity and appearance without unexplained changes?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_027",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "B1.4",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_028",
+      "dimension": "Bind",
+      "focus": "B1",
+      "question": "Does commuter B remain free of any red clothing or newspaper props assigned to commuter A?",
+      "original_display_question": "Does commuter B remain free of any red clothing or newspaper props assigned to commuter A?",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Does commuter B remain free of any red clothing or newspaper props assigned to commuter A?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_028",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "B2.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_029",
+      "dimension": "Bind",
+      "focus": "B2",
+      "question": "Does the woman in the red raincoat hold a folded newspaper?",
+      "original_display_question": "Does the woman in the red raincoat hold a folded newspaper?",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Does the woman in the red raincoat hold a folded newspaper?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_029",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C1.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_013",
+      "dimension": "Complete",
+      "focus": "C1",
+      "question": "Rate the visual completeness and legibility of the station hall environment and the two commuters. A score of 4 means the pale floor tiles, stone walls, closed ticket shutters, subdued exit signs, the broad central stone pillar, and both commuters (A in a red raincoat with a newspaper, B in a blue jacket with a bag) are fully detailed and clearly legible throughout the video. A score of 0 means these elements are mostly unrecognizable, missing crucial details, or reduced to abstract shapes.",
+      "original_display_question": "Rate the visual completeness and legibility of the station hall environment and the two commuters. A score of 4 means the pale floor tiles, stone walls, closed ticket shutters, subdued exit signs, the broad central stone pillar, and both commuters (A in a red raincoat with a newspaper, B in a blue jacket with a bag) are fully detailed and clearly legible throughout the video. A score of 0 means these elements are mostly unrecognizable, missing crucial details, or reduced to abstract shapes.",
+      "score": 0.75,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 0.75,
+        "passed": true,
+        "answer": "3",
+        "question": "Rate the visual completeness and legibility of the station hall environment and the two commuters. A score of 4 means the pale floor tiles, stone walls, closed ticket shutters, subdued exit signs, the broad central stone pillar, and both commuters (A in a red raincoat with a newspaper, B in a blue jacket with a bag) are fully detailed and clearly legible throughout the video. A score of 0 means these elements are mostly unrecognizable, missing crucial details, or reduced to abstract shapes."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_013",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C1.2",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_014",
+      "dimension": "Complete",
+      "focus": "C1",
+      "question": "Rate the coherence and plausibility of the materials, textures, and lighting in the scene. A score of 4 means the soft overhead lighting realistically interacts with the pale floor tiles, the stone texture of the walls and central pillar, and the fabric of the red raincoat and blue jacket, creating a convincing physical environment. A score of 0 means the lighting is flat or inconsistent, and materials appear artificial, plastic-like, or lack appropriate texture.",
+      "original_display_question": "Rate the coherence and plausibility of the materials, textures, and lighting in the scene. A score of 4 means the soft overhead lighting realistically interacts with the pale floor tiles, the stone texture of the walls and central pillar, and the fabric of the red raincoat and blue jacket, creating a convincing physical environment. A score of 0 means the lighting is flat or inconsistent, and materials appear artificial, plastic-like, or lack appropriate texture.",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "4",
+        "question": "Rate the coherence and plausibility of the materials, textures, and lighting in the scene. A score of 4 means the soft overhead lighting realistically interacts with the pale floor tiles, the stone texture of the walls and central pillar, and the fabric of the red raincoat and blue jacket, creating a convincing physical environment. A score of 0 means the lighting is flat or inconsistent, and materials appear artificial, plastic-like, or lack appropriate texture."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_014",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C1.3",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_015",
+      "dimension": "Complete",
+      "focus": "C1",
+      "question": "Rate the technical imaging quality of the video. A score of 4 means the video is consistently sharp, well-exposed, and free from distracting motion blur or compression artifacts, allowing clear visibility of the station hall and the commuters. A score of 0 means the video suffers from severe blur, poor exposure, or heavy compression artifacts that significantly degrade the viewing experience.",
+      "original_display_question": "Rate the technical imaging quality of the video. A score of 4 means the video is consistently sharp, well-exposed, and free from distracting motion blur or compression artifacts, allowing clear visibility of the station hall and the commuters. A score of 0 means the video suffers from severe blur, poor exposure, or heavy compression artifacts that significantly degrade the viewing experience.",
+      "score": 0.75,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 0.75,
+        "passed": true,
+        "answer": "3",
+        "question": "Rate the technical imaging quality of the video. A score of 4 means the video is consistently sharp, well-exposed, and free from distracting motion blur or compression artifacts, allowing clear visibility of the station hall and the commuters. A score of 0 means the video suffers from severe blur, poor exposure, or heavy compression artifacts that significantly degrade the viewing experience."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_015",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C1.4",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_016",
+      "dimension": "Complete",
+      "focus": "C1",
+      "question": "Rate the rendering cleanliness of Commuter A and Commuter B and its environment on 0-4 (4 = no non-physical artifacts such as clipping, melting or corrupted textures; 0 = severe non-physical artifacts). Physically plausible deformation caused by the action is not an artifact.",
+      "original_display_question": "Rate the rendering cleanliness of Commuter A and Commuter B and its environment on 0-4 (4 = no non-physical artifacts such as clipping, melting or corrupted textures; 0 = severe non-physical artifacts). Physically plausible deformation caused by the action is not an artifact.",
+      "score": 0.75,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 0.75,
+        "passed": true,
+        "answer": "3",
+        "question": "Rate the rendering cleanliness of Commuter A and Commuter B and its environment on 0-4 (4 = no non-physical artifacts such as clipping, melting or corrupted textures; 0 = severe non-physical artifacts). Physically plausible deformation caused by the action is not an artifact."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_016",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C2.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_017",
+      "dimension": "Complete",
+      "focus": "C2",
+      "question": "Rate the kinematic and dynamic plausibility of the visible subject/object motion on 0-4 (4 = any visible movement has coherent speed, weight, acceleration and inertia, and an intentionally static object or phase is not penalized for remaining still; 0 = clearly impossible kinematics or unexplained rigid/mechanical motion).",
+      "original_display_question": "Rate the kinematic and dynamic plausibility of the visible subject/object motion on 0-4 (4 = any visible movement has coherent speed, weight, acceleration and inertia, and an intentionally static object or phase is not penalized for remaining still; 0 = clearly impossible kinematics or unexplained rigid/mechanical motion).",
+      "score": 0.75,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 0.75,
+        "passed": true,
+        "answer": "3",
+        "question": "Rate the kinematic and dynamic plausibility of the visible subject/object motion on 0-4 (4 = any visible movement has coherent speed, weight, acceleration and inertia, and an intentionally static object or phase is not penalized for remaining still; 0 = clearly impossible kinematics or unexplained rigid/mechanical motion)."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_017",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C2.2",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_018",
+      "dimension": "Complete",
+      "focus": "C2",
+      "question": "Rate the temporal appearance coherence of the video on a scale of 0 to 4. A score of 4 means the woman in the red raincoat, the man in the blue jacket, their props, and the station hall environment remain completely stable with no flickering, popping, exposure jumps, or jitter. A score of 0 means severe and constant flickering, popping, or jitter completely disrupts the visual continuity of the scene.",
+      "original_display_question": "Rate on 0-4 how fully the output satisfies this requirement (4 = fully satisfied with clear visible evidence; 0 = absent or contradicted): Rate the temporal appearance coherence of the video on a scale of 0 to 4. A score of 4 means the woman in the red raincoat, the man in the blue jacket, their props, and the station hall environment remain completely stable with no flickering, popping, exposure jumps, or jitter. A score of 0 means severe and constant flickering, popping, or jitter completely disrupts the visual continuity of the scene.",
+      "score": 0.75,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 0.75,
+        "passed": true,
+        "answer": "3",
+        "question": "Rate on 0-4 how fully the output satisfies this requirement (4 = fully satisfied with clear visible evidence; 0 = absent or contradicted): Rate the temporal appearance coherence of the video on a scale of 0 to 4. A score of 4 means the woman in the red raincoat, the man in the blue jacket, their props, and the station hall environment remain completely stable with no flickering, popping, exposure jumps, or jitter. A score of 0 means severe and constant flickering, popping, or jitter completely disrupts the visual continuity of the scene."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_018",
+        "verdict": "bad",
+        "status": "confirmed_wrong",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C2.3",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_019",
+      "dimension": "Complete",
+      "focus": "C2",
+      "question": "Do the characters' hands plausibly grasp and support the folded newspaper and the small bag during their visible walking phases?",
+      "original_display_question": "Do the characters' hands plausibly grasp and support the folded newspaper and the small bag during their visible walking phases?",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Do the characters' hands plausibly grasp and support the folded newspaper and the small bag during their visible walking phases?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_019",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C2.4",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_020",
+      "dimension": "Complete",
+      "focus": "C2",
+      "question": "Evaluate the dynamic geometry stability of the moving entities on a scale of 0 to 4. A score of 4 means the body proportions of the woman and the man, as well as the structural shapes of the folded newspaper and the small bag, remain consistently stable and solid without unintended deformation. A score of 0 means the characters' bodies or limbs severely warp, melt, or distort, or the props morph into unrecognizable shapes during movement.",
+      "original_display_question": "Evaluate the dynamic geometry stability of the moving entities on a scale of 0 to 4. A score of 4 means the body proportions of the woman and the man, as well as the structural shapes of the folded newspaper and the small bag, remain consistently stable and solid without unintended deformation. A score of 0 means the characters' bodies or limbs severely warp, melt, or distort, or the props morph into unrecognizable shapes during movement.",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "4",
+        "question": "Evaluate the dynamic geometry stability of the moving entities on a scale of 0 to 4. A score of 4 means the body proportions of the woman and the man, as well as the structural shapes of the folded newspaper and the small bag, remain consistently stable and solid without unintended deformation. A score of 0 means the characters' bodies or limbs severely warp, melt, or distort, or the props morph into unrecognizable shapes during movement."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_020",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C3.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_021",
+      "dimension": "Complete",
+      "focus": "C3",
+      "question": "If the proxy visibly contains a recognized distortion, does the output avoid copying that distortion?",
+      "original_display_question": "If the proxy visibly contains a recognized distortion, does the output avoid copying that distortion?",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "4",
+        "question": "If the proxy visibly contains a recognized distortion, does the output avoid copying that distortion?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_021",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C3.2",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_022",
+      "dimension": "Complete",
+      "focus": "C3",
+      "question": "Score 0-4 on structural completion. 4 = The abstract proxy blocks are fully replaced by anatomically correct humans, a detailed stone pillar, and a structured station hall. 0 = Characters or environment lack basic 3D structure or retain blocky, limbless proxy shapes.",
+      "original_display_question": "Score 0-4 on structural completion. 4 = The abstract proxy blocks are fully replaced by anatomically correct humans, a detailed stone pillar, and a structured station hall. 0 = Characters or environment lack basic 3D structure or retain blocky, limbless proxy shapes.",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "4",
+        "question": "Score 0-4 on structural completion. 4 = The abstract proxy blocks are fully replaced by anatomically correct humans, a detailed stone pillar, and a structured station hall. 0 = Characters or environment lack basic 3D structure or retain blocky, limbless proxy shapes."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_022",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C3.3",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_023",
+      "dimension": "Complete",
+      "focus": "C3",
+      "question": "Score 0-4 on fine-grained motion completion. 4 = Characters exhibit full limb articulation, natural footfalls, and subtle body mechanics missing from the proxy. 0 = Characters lack limb movement, sliding across the floor without stepping.",
+      "original_display_question": "Score 0-4 on fine-grained motion completion. 4 = Characters exhibit full limb articulation, natural footfalls, and subtle body mechanics missing from the proxy. 0 = Characters lack limb movement, sliding across the floor without stepping.",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "4",
+        "question": "Score 0-4 on fine-grained motion completion. 4 = Characters exhibit full limb articulation, natural footfalls, and subtle body mechanics missing from the proxy. 0 = Characters lack limb movement, sliding across the floor without stepping."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_023",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "C3.4",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_024",
+      "dimension": "Complete",
+      "focus": "C3",
+      "question": "Score 0-4 on semantic detail completion. 4 = Includes specific identities, red raincoat, blue jacket, detailed newspaper, bag, pale floor tiles, stone walls, and closed ticket shutters omitted by the proxy. 0 = Missing most or all of these specific semantic details. The 0-4 assessment must also include whether these text-required semantic details or consequences omitted by the proxy are completed: stone pillar.",
+      "original_display_question": "Score 0-4 on semantic detail completion. 4 = Includes specific identities, red raincoat, blue jacket, detailed newspaper, bag, pale floor tiles, stone walls, and closed ticket shutters omitted by the proxy. 0 = Missing most or all of these specific semantic details. The 0-4 assessment must also include whether these text-required semantic details or consequences omitted by the proxy are completed: stone pillar.",
+      "score": 1,
+      "passed": true,
+      "critical": false,
+      "weight": 0.6,
+      "unit_type": "quality_rubric",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "4",
+        "question": "Score 0-4 on semantic detail completion. 4 = Includes specific identities, red raincoat, blue jacket, detailed newspaper, bag, pale floor tiles, stone walls, and closed ticket shutters omitted by the proxy. 0 = Missing most or all of these specific semantic details. The 0-4 assessment must also include whether these text-required semantic details or consequences omitted by the proxy are completed: stone pillar."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_024",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P1.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_001",
+      "dimension": "Preserve",
+      "focus": "P1",
+      "question": "Does the video contain the following text-required semantic entities or roles with their stated counts across the relevant shots: one Commuter A; one Commuter B; one folded newspaper; one small bag; one stone pillar? Treat an abstract proxy block or figure as a semantic figure for its role, and do not drop a required entity merely because the proxy omits or abstracts it.",
+      "original_display_question": "Does the video contain the following text-required semantic entities or roles with their stated counts across the relevant shots: one Commuter A; one Commuter B; one folded newspaper; one small bag; one stone pillar? Treat an abstract proxy block or figure as a semantic figure for its role, and do not drop a required entity merely because the proxy omits or abstracts it.",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Does the video contain the following text-required semantic entities or roles with their stated counts across the relevant shots: one Commuter A; one Commuter B; one folded newspaper; one small bag; one stone pillar? Treat an abstract proxy block or figure as a semantic figure for its role, and do not drop a required entity merely because the proxy omits or abstracts it."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_001",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P1.2",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_002",
+      "dimension": "Preserve",
+      "focus": "P1",
+      "question": "When the relevant subjects are visible together in the proxy and candidate, does the central stone pillar occupy the middle section of the screen?",
+      "original_display_question": "When the relevant subjects are visible together in the proxy and candidate, does the central stone pillar occupy the middle section of the screen?",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "When the relevant subjects are visible together in the proxy and candidate, does the central stone pillar occupy the middle section of the screen?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_002",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P1.3",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_003",
+      "dimension": "Preserve",
+      "focus": "P1",
+      "question": "Compared with the proxy, is Commuter A's walking lane positioned further away from the camera than Commuter B's walking lane?",
+      "original_display_question": "Compared with the proxy, is Commuter A's walking lane positioned further away from the camera than Commuter B's walking lane?",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, is Commuter A's walking lane positioned further away from the camera than Commuter B's walking lane?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_003",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P1.4",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_004",
+      "dimension": "Preserve",
+      "focus": "P1",
+      "question": "Compared with the proxy, does the central stone pillar completely occlude Commuter A during the middle portion of the video?",
+      "original_display_question": "Compared with the proxy, does the central stone pillar completely occlude Commuter A during the middle portion of the video?",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, does the central stone pillar completely occlude Commuter A during the middle portion of the video?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_004",
+        "verdict": "bad",
+        "status": "confirmed_wrong",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P2.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_005",
+      "dimension": "Preserve",
+      "focus": "P2",
+      "question": "Compared with the proxy, classify Commuter A and Commuter B's coarse whole-entity translation path as same, mostly_same, or different. Use same when the broad start, middle and end screen regions and the main direction sequence agree. Use mostly_same when most of those coarse phases agree despite offset, speed, scale, pose or route-bend differences. Use different when the main direction, corridor or phase sequence does not correspond.",
+      "original_display_question": "Compared with the proxy, classify Commuter A and Commuter B's coarse whole-entity translation path as same, mostly_same, or different. Use same when the broad start, middle and end screen regions and the main direction sequence agree. Use mostly_same when most of those coarse phases agree despite offset, speed, scale, pose or route-bend differences. Use different when the main direction, corridor or phase sequence does not correspond.",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "categorical_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "same",
+        "question": "Compared with the proxy, classify Commuter A and Commuter B's coarse whole-entity translation path as same, mostly_same, or different. Use same when the broad start, middle and end screen regions and the main direction sequence agree. Use mostly_same when most of those coarse phases agree despite offset, speed, scale, pose or route-bend differences. Use different when the main direction, corridor or phase sequence does not correspond."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_005",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P2.2",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_006",
+      "dimension": "Preserve",
+      "focus": "P2",
+      "question": "Compared with the proxy, does the video preserve the macro interaction sequence of Commuter A and Commuter B approaching the central pillar from opposite sides, crossing paths at the center, and continuing their steady horizontal progress?",
+      "original_display_question": "Compared with the proxy, does the video preserve the macro interaction sequence of Commuter A and Commuter B approaching the central pillar from opposite sides, crossing paths at the center, and continuing their steady horizontal progress?",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, does the video preserve the macro interaction sequence of Commuter A and Commuter B approaching the central pillar from opposite sides, crossing paths at the center, and continuing their steady horizontal progress?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_006",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P2.3",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_007",
+      "dimension": "Preserve",
+      "focus": "P2",
+      "question": "Compared with the proxy, does the camera remain completely static throughout the entire video, providing a locked shot with no camera movement or cuts?",
+      "original_display_question": "Compared with the proxy, does the camera remain completely static throughout the entire video, providing a locked shot with no camera movement or cuts?",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, does the camera remain completely static throughout the entire video, providing a locked shot with no camera movement or cuts?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_007",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P2.4",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_008",
+      "dimension": "Preserve",
+      "focus": "P2",
+      "question": "Compared with the proxy, is the video framed as a wide shot that is loose enough to capture the full head-to-toe bodies of Commuter A and Commuter B whenever they are not occluded by the central pillar?",
+      "original_display_question": "Compared with the proxy, is the video framed as a wide shot that is loose enough to capture the full head-to-toe bodies of Commuter A and Commuter B whenever they are not occluded by the central pillar?",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, is the video framed as a wide shot that is loose enough to capture the full head-to-toe bodies of Commuter A and Commuter B whenever they are not occluded by the central pillar?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_008",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P3.1",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_009",
+      "dimension": "Preserve",
+      "focus": "P3",
+      "question": "Compared with the proxy, what is the chronological order of events involving Commuter A, Commuter B, and the central stone pillar? A) Commuter A and Commuter B approach the pillar from opposite sides, then Commuter A is completely hidden behind the pillar while Commuter B passes in front, and finally Commuter A emerges from the other side. B) Commuter A is hidden behind the pillar before the commuters approach it. C) Commuter A emerges from the pillar before being hidden. D) The sequence of approach, occlusion, and emergence is missing or incomplete.",
+      "original_display_question": "Compared with the proxy, what is the chronological order of events involving Commuter A, Commuter B, and the central stone pillar? A) Commuter A and Commuter B approach the pillar from opposite sides, then Commuter A is completely hidden behind the pillar while Commuter B passes in front, and finally Commuter A emerges from the other side. B) Commuter A is hidden behind the pillar before the commuters approach it. C) Commuter A emerges from the pillar before being hidden. D) The sequence of approach, occlusion, and emergence is missing or incomplete.",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "categorical_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, what is the chronological order of events involving Commuter A, Commuter B, and the central stone pillar? A) Commuter A and Commuter B approach the pillar from opposite sides, then Commuter A is completely hidden behind the pillar while Commuter B passes in front, and finally Commuter A emerges from the other side. B) Commuter A is hidden behind the pillar before the commuters approach it. C) Commuter A emerges from the pillar before being hidden. D) The sequence of approach, occlusion, and emergence is missing or incomplete."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_009",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P3.2",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_010",
+      "dimension": "Preserve",
+      "focus": "P3",
+      "question": "Compared with the proxy, do the text-declared macro events occur in their corresponding broad shots/time phases across the full video: A enters from left and B enters from right, walking towards the pillar (0.0-4.0 s); A is fully occluded behind the pillar while B walks visibly in front of it (4.0-8.0 s); A reappears from the right edge of the pillar while B clears the left edge (Shortly after 8.0 s)? Timing may be approximate, but each event must actually occur and begin in the corresponding phase rather than being replaced by camera motion, a reaction face, or an event from another shot.",
+      "original_display_question": "Compared with the proxy, do the text-declared macro events occur in their corresponding broad shots/time phases across the full video: A enters from left and B enters from right, walking towards the pillar (0.0-4.0 s); A is fully occluded behind the pillar while B walks visibly in front of it (4.0-8.0 s); A reappears from the right edge of the pillar while B clears the left edge (Shortly after 8.0 s)? Timing may be approximate, but each event must actually occur and begin in the corresponding phase rather than being replaced by camera motion, a reaction face, or an event from another shot.",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, do the text-declared macro events occur in their corresponding broad shots/time phases across the full video: A enters from left and B enters from right, walking towards the pillar (0.0-4.0 s); A is fully occluded behind the pillar while B walks visibly in front of it (4.0-8.0 s); A reappears from the right edge of the pillar while B clears the left edge (Shortly after 8.0 s)? Timing may be approximate, but each event must actually occur and begin in the corresponding phase rather than being replaced by camera motion, a reaction face, or an event from another shot."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_010",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P3.3",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_011",
+      "dimension": "Preserve",
+      "focus": "P3",
+      "question": "Compared with the proxy, does the output show the same macro action/state on each side of the real cut (continue when the proxy continues and stop/change when the proxy stops or changes), rather than resetting or jumping?",
+      "original_display_question": "Compared with the proxy, does the output show the same macro action/state on each side of the real cut (continue when the proxy continues and stop/change when the proxy stops or changes), rather than resetting or jumping?",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "temporal_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, does the output show the same macro action/state on each side of the real cut (continue when the proxy continues and stop/change when the proxy stops or changes), rather than resetting or jumping?"
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_011",
+        "verdict": "bad",
+        "status": "confirmed_wrong",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    },
+    {
+      "id": "P3.4",
+      "assertion_id": "a_s01_pillar_crossing__P0_T2_012",
+      "dimension": "Preserve",
+      "focus": "P3",
+      "question": "Compared with the proxy, does one folded newspaper remain in the same broad persistent state across all corresponding shots where it is visible, including while remaining unchanged or held/supported/attached rather than changing? Ignore camera motion and temporary occlusion. Judge only this named target, not a substitute bag, folder or other carried prop; if the named target is missing, replaced by another object, or no longer held by the same person after occlusion, answer no. Answer yes only when the same named object stays present in the same unchanged broad state as the proxy.",
+      "original_display_question": "Compared with the proxy, does one folded newspaper remain in the same broad persistent state across all corresponding shots where it is visible, including while remaining unchanged or held/supported/attached rather than changing? Ignore camera motion and temporary occlusion. Judge only this named target, not a substitute bag, folder or other carried prop; if the named target is missing, replaced by another object, or no longer held by the same person after occlusion, answer no. Answer yes only when the same named object stays present in the same unchanged broad state as the proxy.",
+      "score": 1,
+      "passed": true,
+      "critical": true,
+      "weight": 1,
+      "unit_type": "yes_no_vqa",
+      "status": "historical_scored",
+      "historical_result": {
+        "score": 1,
+        "passed": true,
+        "answer": "yes",
+        "question": "Compared with the proxy, does one folded newspaper remain in the same broad persistent state across all corresponding shots where it is visible, including while remaining unchanged or held/supported/attached rather than changing? Ignore camera motion and temporary occlusion. Judge only this named target, not a substitute bag, folder or other carried prop; if the named target is missing, replaced by another object, or no longer held by the same person after occlusion, answer no. Answer yes only when the same named object stays present in the same unchanged broad state as the proxy."
+      },
+      "human_review": {
+        "key": "s01_pillar_crossing__P0_T2__sd25::a_s01_pillar_crossing__P0_T2_012",
+        "verdict": "ok",
+        "status": "confirmed_correct",
+        "source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+        "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json"
+      }
+    }
+  ],
+  "presentation": {
+    "checklist_version": "Human-reviewed v42",
+    "display_scope": "Full video; include all applicable visible phases and ignore temporary occlusion only where the requirement permits it.",
+    "score_policy": "Original v42 evaluator scores are displayed without inversion or inferred human numeric ratings. Historical human agreement/disagreement labels are retained as provenance, not used to overwrite scores."
+  },
+  "audit": {
+    "source": "review_site_formal_p2vbench_20261031_v42/data.json",
+    "labels_source": "runs/formal_5scenes_4models_20261026/review_v42_final_labels_accept_changed.json",
+    "alignment_source": "runs/formal_5scenes_4models_20261026/review_v42_final_alignment_accept_changed.json",
+    "reviewed_count": 29,
+    "confirmed_count": 26,
+    "rejected_ids": [
+      "C2.2",
+      "P1.4",
+      "P3.3"
+    ],
+    "reference_image_count": 2,
+    "reference_audio_count": 0,
+    "absent_metrics": [
+      "B2.2",
+      "B2.3",
+      "B2.4"
+    ],
+    "absent_reason": "No independent reference-audio input was supplied.",
+    "wording_notes": [
+      {
+        "id": "P3.3",
+        "issue": "The reviewed wording refers to a real cut, although this case requests one continuous shot. Original reviewed wording is retained to avoid applying a historical score to a new question."
+      },
+      {
+        "id": "C3.1",
+        "issue": "The reviewed question is conditional on a recognized proxy distortion; it should not be interpreted as evidence that this proxy has a distortion."
+      }
+    ],
+    "visual_review": {
+      "date": "2026-11-25",
+      "method": "Visual inspection of proxy and output at 0.5-second intervals, enlarged prop crops, and final-phase frames; original questions and evaluator explanations compared.",
+      "scope": "Evidence audit, not a new independent numeric scoring run or a replacement human annotation.",
+      "findings": [
+        {
+          "ids": [
+            "P1.4"
+          ],
+          "observation": "The red-coated commuter is fully hidden during the middle phase and returns to the right; the blue-jacket commuter passes in front. The original broad occlusion score is supported."
+        },
+        {
+          "ids": [
+            "C2.2"
+          ],
+          "observation": "Scene, lighting, clothing, and body appearance are broadly stable. The bag is clearly visible in the middle but not clearly visible in the early and late samples; view-dependent concealment versus disappearance cannot be conclusively resolved from these samples. The original 0.75 is defensible; automatic inversion to 0.25 is not evidence-based."
+        },
+        {
+          "ids": [
+            "P3.3"
+          ],
+          "observation": "The prompt and both videos are continuous shots, but the reviewed question refers to a real cut. The score reflects continuous action, not verified cross-cut continuity. This is a question-applicability issue, not evidence for a zero score."
+        },
+        {
+          "ids": [
+            "B1.1",
+            "B1.3",
+            "C2.3",
+            "C2.4"
+          ],
+          "observation": "Full-score claims about bag presence, support, and continuity are less certain in early/late frames. Scores are preserved as historical outputs, not newly certified."
+        },
+        {
+          "ids": [
+            "P3.1"
+          ],
+          "observation": "The original question offers A/B/C/D alternatives but the evaluator recorded yes. Event order is visible, but the response schema is inconsistent."
+        },
+        {
+          "ids": [
+            "B1.2"
+          ],
+          "observation": "A zero based on insufficient facial detail is not proof of an identity mismatch. Reference identity remains difficult to establish at this wide framing."
+        }
+      ]
+    }
+  }
+}
